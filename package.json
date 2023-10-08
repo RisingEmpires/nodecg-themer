@@ -1,0 +1,88 @@
+{
+  "name": "nodecg-themer",
+  "version": "0.0.0",
+  "description": "",
+  "homepage": "",
+  "author": {
+    "name": "Coow",
+    "email": " ",
+    "url": ""
+  },
+  "files": [
+    "dashboard",
+    "graphics",
+    "extension.js",
+    "extension"
+  ],
+  "keywords": [
+    "",
+    "nodecg-bundle"
+  ],
+  "nodecg": {
+    "compatibleRange": "^2.0.0",
+    "dashboardPanels": [
+      {
+        "name": "node-cg-themer",
+        "title": "NodeCG Themer",
+        "width": 4,
+        "file": "node-cg-themer.html",
+        "headerColor": "#525F78"
+      }
+    ],
+    "assetCategories": [
+      {
+        "name": "themes",
+        "title": "Themes",
+        "allowedTypes": [
+          "css"
+        ]
+      }
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.5%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "scripts": {
+    "build": "node scripts/build.mjs --all",
+    "build:extension": "node scripts/build.mjs --skipBrowser --extension",
+    "watch": "node scripts/build.mjs --all --watch",
+    "watch:browser": "node scripts/build.mjs --dashboard --graphics --skipExtension --watch",
+    "watch:schemas": "node scripts/build.mjs --schemas --watch",
+    "dev": "concurrently --kill-others \"npm run watch:schemas\" \"npm run watch:browser\" \"nodemon\"",
+    "generate-schema-types": "trash src/types/schemas && nodecg schema-types"
+  },
+  "dependencies": {
+    "@types/react": "*",
+    "@types/react-dom": "*",
+    "react": "*",
+    "react-dom": "*",
+    "react-select": "^5.7.7",
+    "react-tooltip": "^5.21.5",
+    "ts-node": "*",
+    "use-nodecg": "^0.4.1-2"
+  },
+  "devDependencies": {
+    "@nodecg/types": "^2.0.0",
+    "@parcel/config-default": "*",
+    "@parcel/core": "*",
+    "@parcel/reporter-cli": "*",
+    "@parcel/validator-typescript": "*",
+    "@types/node": "*",
+    "concurrently": "*",
+    "glob": "^10.3.10",
+    "nodemon": "*",
+    "trash-cli": "*",
+    "typescript": "*"
+  },
+  "repository": "https://github.com/RisingEmpires/aoe4-stream-manager.git",
+  "license": "Apache-2.0"
+}
