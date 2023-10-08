@@ -63,6 +63,8 @@
   "dependencies": {
     "@types/react": "*",
     "@types/react-dom": "*",
+    "nodecg": "^2.1.8",
+    "nodecg-cli": "^8.6.8",
     "react": "*",
     "react-dom": "*",
     "react-select": "^5.7.7",
