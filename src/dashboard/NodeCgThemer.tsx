@@ -31,7 +31,6 @@ export function NodeCgThemer() {
 		set_options(_array);
 	}, [themes]);
 
-
 	const handleChange = (selectedOption => {
 		set_newTheme(selectedOption)
 	})
